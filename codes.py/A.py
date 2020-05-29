@@ -1,5 +1,5 @@
 choice = 'Y'
 while(choice != "N"):
-    print("Himani ")
+    print("Himani Dhawan")
     choice= input("enter the value of choice")
     
