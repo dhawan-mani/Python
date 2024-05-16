@@ -1,36 +1,44 @@
-def add(a, b):
-    return a+b
-def sub(a, b):
-    return a-b
-def multiply(a, b):
-    return a*b
-def divide(a, b):
-    return a/b
-choice = 'y'
-while(choice != "n"):
-    print ("select an operation. Press n to exit")
+#Make a calculator
+
+def add(a,b):
+    x = a+b
+    return x
+def sub(a,b):
+    x = a-b
+    return x
+def multiply(a,b):
+    x = a*b
+    return x
+def divide(a,b):
+    x = a/b
+    return x
+def exp(a,b):
+    x= a**b
+
+choice = 'Y'
+while choice!= 'N':
+    print("Select an operation.Choose N to exit")
     print("+")
     print("-")
     print("*")
     print("/")
-    print("n")
-    choice = input("select operator to use:")
-    if choice == "n":
-        print("Bye")
+    print("**")
+    choice = input("Enter your choice")
+    if choice == 'N':
+        print("Bye! See you later!")
         break
-    A = float(input("enter first number: "))
-    B = float(input("enter second number: "))
-    if choice == '+':
-        print(A,"+",B,"=", add(A,B))
-    elif choice == '-':
-        print(A,"-",B,"=", sub(A,B))
-    elif choice ==  '/':
-        if B == 0:
-            print("Not defined")
-        else:
-            print(A,"/",B,"=", divide(A,B))
-    elif choice == "*":
-        print(A,"*",B,"=", multiply(A,B))
     else:
-        print("INVALID INPUT")
-    
+        A = float(input("enter first number: "))
+        B = float(input("enter second number: "))
+        if choice == "+":
+            print("A+B=:"+ add(A,B))
+        elif choice == "-":
+            print("A-B=:",sub(A,B))
+        elif choice == "/":
+            print("A/B=:",divide(A,B))
+        elif choice == "**":
+            print("A-B=:",exp(A,B))
+        elif choice == "*":
+            print("A*B=:",multiply(A,B))
+        else:
+            print("Invalid Input")
