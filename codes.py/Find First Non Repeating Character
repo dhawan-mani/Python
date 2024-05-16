@@ -1,0 +1,26 @@
+from collections import OrderedDict
+string = "dddccdbba"
+
+class solution:
+    def __init__(self,string):
+        self.string = string
+    def nonrepeating (self):
+        word_dict = OrderedDict()
+        for char in self.string:
+            if char not in word_dict :
+                word_dict[char] = 1
+            else:
+                word_dict[char]= word_dict[char]+1
+        number=[]      
+        for index,(key,values) in enumerate(word_dict.items()):
+            if values == 1 :
+                number.append(string.index(key))
+        
+        if len(number) == 0: 
+            return -1 
+        else: 
+            return number[0] 
+                
+obj = solution(string)
+obj.nonrepeating()
+    
