@@ -35,7 +35,10 @@ while choice!= 'N':
         elif choice == "-":
             print("A-B=:",sub(A,B))
         elif choice == "/":
-            print("A/B=:",divide(A,B))
+            if B == 0:
+                print("Not Defined")
+            else:
+                print("A/B=:",divide(A,B))
         elif choice == "**":
             print("A-B=:",exp(A,B))
         elif choice == "*":
